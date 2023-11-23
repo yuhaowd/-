@@ -1,0 +1,46 @@
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: 123456
+    username: root
+    url: jdbc:mysql://localhost:3306/message?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+  #??????
+  mail:
+    #??smtp??????
+    # qq???smtp.qq.com          ???465?587
+    # sina    smtp.sina.cn
+    # aliyun  smtp.aliyun.com
+    # 163     smtp.163.com       ???465?994
+    host: smtp.qq.com
+    #?????
+    username: 3406138837@qq.com
+    #????,?????????????????????
+    password: pjsawtasnwscdbch
+    #???465?587
+    port: 587
+    #????????UTF-8
+    default-encoding: UTF-8
+
+server:
+  port: 9000
+
+mybatis-plus:
+  type-aliases-package: com.zshs.messagecenter.entity
+  mapper-locations: classpath*:/mapper/**/*Mapper.xml
+  #  global-config:
+  #    db-config:
+  #      id-type: auto
+  #      field-strategy: not_empty
+  #      capital-mode: true
+  #    banner: true
+  #    meta-object-handler: com.example.handler.MyMetaObjectHandler
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+  # ????
+#  pagehelper:
+#    helper-dialect: mysql
+#    reasonable: true
+#    support-methods-arguments: true
